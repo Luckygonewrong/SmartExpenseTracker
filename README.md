@@ -1,0 +1,2 @@
+# SmartExpenseTracker
+python project
