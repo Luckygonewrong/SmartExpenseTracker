@@ -29,4 +29,6 @@ A Python command-line application built for **Computational Thinking and Program
 ## How to Run
 Ensure Python 3 is installed, then run:
 ```bash
-python main.py
+## How to Run
+##Ensure Python 3 is installed, then run:
+ python main.py
