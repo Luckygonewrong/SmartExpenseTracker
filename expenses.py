@@ -1,7 +1,0 @@
-date,category,description,amount
-2026-11-01,Food,Hostel Mess & Tea,250.0
-2026-11-03,Books & Study,Python Reference Notebook,180.0
-2026-11-05,Transport,Metro Card Recharge,400.0
-2026-11-07,Entertainment,Weekend Movie Ticket,320.0
-2026-11-10,Utilities,Mobile Data Pack,299.0
-2026-11-12,Food,Campus Canteen Lunch,140.0

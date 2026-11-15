@@ -11,7 +11,7 @@ CATEGORIES = (
     "Other",
 )
 
-# Always store data files in the same folder as this script
+
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 EXPENSE_FILE = os.path.join(BASE_DIR, "expenses.csv")
 BUDGET_FILE = os.path.join(BASE_DIR, "budget.txt")
