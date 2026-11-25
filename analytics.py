@@ -1,8 +1,21 @@
+from datetime import datetime
+
+
 def calculate_total(expenses):
     """Return the sum of all expense amounts."""
     total = 0.0
     for item in expenses:
         total += item["amount"]
+    return total
+
+
+def current_month_total(expenses):
+    """Return total spent in the current month (dates are YYYY-MM-DD)."""
+    month = datetime.now().strftime("%Y-%m")
+    total = 0.0
+    for item in expenses:
+        if item["date"].startswith(month):
+            total += item["amount"]
     return total
 
 
@@ -16,7 +29,7 @@ def check_budget_alert(total_spent, budget):
     percent_used = (total_spent / budget) * 100
 
     print(f"  Monthly Budget : Rs. {budget:.2f}")
-    print(f"  Total Spent    : Rs. {total_spent:.2f} ({percent_used:.1f}%)")
+    print(f"  Spent (month)  : Rs. {total_spent:.2f} ({percent_used:.1f}%)")
 
     if remaining < 0:
         print(f"  [ALERT] Budget exceeded by Rs. {abs(remaining):.2f}!")
@@ -72,7 +85,7 @@ def print_category_summary(expenses, budget):
         print(f"  {cat:<16} | Rs. {amt:>8.2f} ({pct:>5.1f}%) | {bar}")
     print("-" * 65)
 
-    check_budget_alert(grand_total, budget)
+    check_budget_alert(current_month_total(expenses), budget)
 
 
 def filter_expenses(expenses, keyword):

@@ -8,7 +8,7 @@ from storage import (
     save_budget,
 )
 from analytics import (
-    calculate_total,
+    current_month_total,
     check_budget_alert,
     print_expenses_table,
     print_category_summary,
@@ -68,7 +68,7 @@ def add_expense(expenses, budget):
     save_expenses(expenses)
 
     print("\n[OK] Expense saved successfully!")
-    check_budget_alert(calculate_total(expenses), budget)
+    check_budget_alert(current_month_total(expenses), budget)
 
 
 def search_expenses(expenses):
